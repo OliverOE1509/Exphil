@@ -1,0 +1,71 @@
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 7 - virkeligheten: hvordan den ser ut og hvordan den er}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\section{Virkelighetens natur}
+
+
+\textbf{\textit{Demokrit}}: en filosof i antikken. Han mente at mente at alt som finnes, består av uendelig mengde med små udelelige atomer, og et uendelig stort tomrom rundt de.
+
+metafysiske spørsmål: et spørsmål om virkelighetens natur.
+
+
+
+I kap 7 skal vi ta for oss et viktig metafysisk teori. Platons teori om formene. Platon hadde et eksempel om en hule hvor det har vært fanger hele sitt liv. Det eneste disse fangene har sett er skygger, og er oppdratt til å tro at det er virkeligheten. En av fangene slipper løs av hulen og ser at det finnes en hel annen verden, og at skyggene de så bare er projeksjoner av former de ser. Fangen kommer tilbake for å slippe løs fangene, men de nekter, fordi de er for ignorante og arrogante til å tro at det er noe annet enn skygger som er virkeligheten.
+
+Dette kan trekkes til Sokrates, som ble dømt til døden for å utfordre den regjerende autoriteten. De ble fiendtlige når de ble utfordret på spørsmål de ikke visste svaret på. \textbf{I dette kapittelet skal vi gå dypere enn hule-analogien}
+
+
+\section{Hvordan kan vi oppdage sannheten?}
+
+
+Dette er et epistemoligisk spørsmål
+
+\textbf{\textit{Epistemologi: Teorien om kunnskap}}
+
+\textbf{\textit{Menos paradoks}}
+\begin{enumerate}
+    \item hvis vi leter etter et svar, betyr det at vi ikke vet hva det er.
+    \item Hvordan kan vi gjenkjenne noe vi ikke vet hva er?
+    \item Hvis vi visste hva vi lette etter, ville vi ikke lett ettet det til å begynne med
+\end{enumerate}
+
+
+
+
+\end{document}
