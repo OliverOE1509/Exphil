@@ -1,0 +1,151 @@
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 8 - Hvorfor? Å forklare verden med 4 årsaker}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Forklaring}
+
+Når vi spør hvorfor, leter vi etter en forklaring.\\
+
+Forklaring er sentralt i vitenskapene.
+
+Eksempel:
+
+\begin{enumerate}
+    \item Hvorfor kan et tre vokse 30 meter høyt, men ikke en hageplante?
+    \item Hvorfor brøt det ut krig i Europe i 1914?
+    \item Hvorfor er arbeidsledigheten så høy noen deler av landet?
+\end{enumerate}
+
+
+Her skal vi se på hvordan forklaringer fungerer, og hvordan de er knyttet til årsakssammenhengen.
+
+Tatt ut av den greske filosofen \textbf{\textit{Aristoteles}}
+
+
+\section{Aristoteles om forklaringer i vitenskap}
+
+
+Aristoteles tenker at forklaring er knyttet til vitenskapelig kunnskap eller forståelse. Vi kan ikke ha skjønt noe med mindre vi har skjønt grunnen\\
+
+Betyr at: For å forstå noe, må vi forstå \textit{hvorfor det finnes}\\
+
+Med bare observasjoner, kan vi ikke forstå hvorfor faktaene henger sammen (kausalitet)
+
+
+Aristoteles spør så: \textbf{\textit{Hva slags elementer er viktige for å gi en forklaring?}}
+
+\section{De 4 årsakene}
+
+
+\begin{enumerate}
+    \item \textbf{\textit{materiell årsak}}
+    \item \textbf{\textit{formale årsak}}
+    \item \textbf{\textit{virkende årsak}}
+    \item \textbf{\textit{hensiktsmessigårsak}}
+\end{enumerate}
+
+\subsection{årsak}
+
+Hver av de 4 årsakene bidrar til en \textbf{\textit{forklaring}}
+
+Ta et eksempel:
+Du er en arkeolog på en gresk øy og har gjort en viktig observasjon. Her er de spørsmålene du må spørre for å forklare hvorfor
+
+\begin{itemize}
+    \item Hva er tingen jeg har funnet laget av? Er den lagd av leire eller bronse?
+    \item Hva slags ting har du funnet? Er det en statue eller en fint dekorert skje?
+    \item Hva eller hvem lagde gjenstanden? Er det menneskeskapt i det hele tatt? Har en skultpør laget den?
+    \item Hva var gjenstandens hensikt? Hadde den en religiøs hensikt? Var det et verktøy?
+\end{itemize}
+
+
+\section{Teologi}
+
+Ifølge Aristoteles har \textit{alle} naturlige gjenstander en hensiktsmessig årsak. Alle naturlige ting har et formål eller en funksjon. Trær og andre planter har en årsak. Dette impliserer at ting i naturen blir til ved en tilfeldighet.\\
+
+Når noe skjer i naturen, skjer det alltid med en hensikt, et formål eller for noes skyld. Dette kalles et \textbf{\textit{teologisk verdenssyn}}
+
+\textbf{\textit{teologisk verdenssyn: Alle hendelser har en hensiktsmessigårsak}}
+
+Dette kan kobles mot religion. All natur har en hensikt fordi det er innrettet av gud.\\
+
+
+\subsection{Spørsmål fra Thomas Nagel}
+
+\textbf{\textit{"Vi studerer og jobber for å tjene penger for å ha råd til klær, bosted, underholdning, mat, for å holde liv i seg selv fra år til år, kanskje for å forsørge en familie og en karriere - men for hvilket endelig formål?"}}
+
+
+Aristoteles mente selv at alle mennesker har et endelig mål, og at et dydig liv består i å virkeliggjøre denne hensikten.
+
+I Aristoteles sin tekst i del 8, antar han ikke et teologisk verdenssyn, han stiller spørsmålet om hvorvidt ting i naturen skjer med hensikt. I stedet for å snakke om gud eller hva som gir livene våre mening, snakker han om argumenter for at naturen er en årsak, og dette i betydningens hensikt.
+
+
+Hvis regn ødelegger avlingen, skjer ikke dette fordi det er hensikten med regn, men fordi det er en tilfeldig årsak at avlingen var der regnet falt. \textbf{\textit{Aristoteles nevner et syn som ligner på den evolusjonære forklaringen på dyr og deres deler (Charles Darwin).}}\\
+
+
+
+\subsection{Eksempel på teologisk natursyn}
+
+
+Det kan høres ut som at meningen til at fortenner er skarpere enn andre, er å rive ut kjøtt av byttet. Men det er også like sannsynlig at hensikten er tilfeldig, og at mange dyr fikk et ordnet sett med tenner tilfeldig, og at de dyrene som lever i dag er de som har overlevd.\\
+
+Resultatet av denne tilfeldige prosessen \textit{nå} virker som skarpe fortenner tjener formålet om å bite løs mat. Men den virkelige forklaringen er at bare en kombinasjon av nødvendighet og tilfeldighet.
+
+
+Aristoteles har to argumenter for et teologisk verdenssyn i originalteksten kap. 8.
+
+
+
+\section{Studiespørsmål}
+
+\begin{enumerate}
+    \item Hva er, ifølge Aristoteles, naturvitenskapens forskningsobjekter?
+    \item Tenk deg et tre som har vokst 30 m høyt. Hva ville de 4 årsakene som er relevant for dette faktum være, ifølge Aristoteles? Hvordan ville de 4 årsaker gjelde for forklaringen på våre evner til å se eller høre?
+    \item Hva er Aristoteles argumenter for det teologiske synet, som sier at alt i naturen har en hensikt?
+\end{enumerate}
+
+\subsection{Dette bør du kunne}
+
+\begin{enumerate}
+    \item Ha en grunnleggende forståelse av Aristoteles syn på kunnskap og på hvilken rolle observasjon og forklaring spiller
+    \item Vite hva de 4 årsaker er, og kunne illustrere dem med et eksempel
+    \item Forstå hva det vil si å ha et teologisk verdenssyn, og gjøre rede for hvorfor Aristoteles hadde et slikt syn
+\end{enumerate}
+
+
+
+\end{document}
