@@ -1,0 +1,78 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 9 - Hva er sinnets plass i naturen?}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\section{Er jeg en materiell ting?}
+
+I dette kapittelet skal vi undersøke hvordan vi passer inn i verdensbildet naturvitenskapen gir oss. Og særlig: \textbf{\textit{Kropp sinn problemet}}
+
+
+"Er jeg nok en gjenstand som blyanten og laptopen foran meg, eller er jeg en sjel eller en immateriell gjenstand?"\\
+
+Skal her se på utdrag fra en debatt mellom to 1700-talls filosofer; Descartes og Elisabeth av Bohmen
+
+
+\begin{itemize}
+    \item \textbf{\textit{Descartes: Fremstiller et viktig argument for "Jeg er ikke nok en materiell gjenstand". En av de største forkjempere for dualisme, den oppfatning at sinner er grunnleggende forskjellig fra alle andre materielle gjenstander}}
+    \item \textbf{\textit{Bohmen: Fremstiller et viktig motargument for dualisme. Argumenterer for at sinnet i bunn og grunn er en materiell ting. Dette synet kalles materialisme}}
+\end{itemize}
+
+
+\section{Avgjøres saken av hjernevitenskapen?}
+
+
+Det finnes en vitenskap som studerer sinnet som nok en materiell ting. Vi ser på hjerneceller og hvordan det har en påvirkning på vår oppførsel og oppfatning
+
+\subsection{Matematikken og det mekaniske universet}
+
+\textit{Descartes hadde en fundamental uenighet med Aristoteles, som trodde på at kunnskap begynner fra sansene og sjelen, fordi vi kan gjenkjenne likhet. Descares trodde på matematisk rasjonale og var ikke enig i det teologiske verdenssynet; at alt har en hensikt}
+
+Videre hadde både Elisabeth Bohmen og Descartes et mekanistisk syn på den fysiske verden. Det vil si at hele universet er en stor kompleks maskin med kausale effekter som er til en viss grad predikerbar. Descartes utvidet dette til sinnet, og sier at menneskekroppen og hjernen er komplekse systemer
+
+\textit{Olivers syn på mekanistisk syn: Verden er ikke så enkel slik at den kan brytes ned og generaliseres til likninger. Det er en stor grad av tilfeldighet og sannsynlighet som spiller en rolle for hvordan verden går. Det finnes fenomener vi ikke kan vite om, og derfor ikke kalkulere. Slike hendelser kan vi ikke predikere med sikkerhet.}
+
+
+
+
+Videre, så er 
+
+
+
+
+\end{document}
