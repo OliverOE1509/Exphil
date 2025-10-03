@@ -1,0 +1,63 @@
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Exphil03 Obligatorisk oppgave nr. 2}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\section{Innledning}
+
+Descartes hadde også tro på dualisme, nemlig eksistens av to substanser, den fysiske og den mentale. Det fysiske skulle være styrt av mekanistiske lover, som i bunn og grunn betyr at hele universet er en maskin, som kjører uten en grunn eller en mening. Det mentale substanset er ikke-utstrakt, og har ingen påvirkning fra den mekanistiske maskinen. Descartes mente allikevel at det mentale substanset kan påvirke det fysiske substanset, og forårsake frivillige handlinger som vi gjør. Elisabeth av Bohmen spør Descartes i brevet 6. Mai 1643 om hvordan da. Det virker ugjenkjennelig at noe ikke-utstrakt skal ha noe betydning for noe utstrakt.
+
+
+\section{Bakgrunn}
+
+
+\section{Descartes argument}
+
+
+\section{Elisabeths kritikk}
+
+
+\section{Analyse/Drøfting}
+
+
+
+\section{Konklusjon}
+
+
+
+
+\end{document}
