@@ -1,0 +1,174 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\onehalfspacing
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 10 - Rom og geometri. Hva kan vi vite uten erfaring?}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\section{Forskjellige typer kunnskap}
+
+
+Vi kan få kunnskap med erfaring. jeg vet at et eple faller ned på bakken hvis jeg slipper det nok ganger. Vi har sett hvor viktig kunnskap gjennom erfaring både for Galileo (kap 2) og Aristoteles (kap 7).\\
+
+Finnes det også kunnskap som ikke kommer fra erfaring og observasjon? Det stemmer, Platons (kap 7) ide om former og hvordan vi kan få kunnskap ved å erkjenne former og likhet, er en måte. \textbf{\textit{Immanuel Kant}} hadde også teorier. Han mente at man også kan bruke matematikken for å oppnå kunnskap \\
+
+\begin{description}
+    \item[Immanuel Kant] Filosof på 1700-tallet 
+\end{description}
+
+
+I den andre teksten vil vi se på et svar på Kants syn fra fysikeren \textbf{\textit{Albert Einstein}}
+
+Einsten hever nye fremskritt innen fysikk og matematikk viser at Kant tok feil angående geomentri, og om hvordan sinnet og verden er forbundet
+
+\section{To distinksjoner}
+
+Kant kaller erfaringsbasert kunnskap for \textbf{\textit{a posteriori kunnskap}}. og kunnskap som ikke er basert på erfaring kalles \textbf{\textit{a priori kunnskap}}
+
+\begin{description}
+    \item[a posteriori] Kunnskapen kommer \textit{etter} erfaring
+    \item[a priori] kunnskapen kommer før erfaring  
+\end{description}
+
+Finnes det i det hele tatt a priori kunnskap?
+
+
+\begin{description}
+    \item[syntetisk kunnskap] kunnskap der predikatet gir oss ny informasjon om subjektet. At heliumballonger er lettere enn luft. Du har fått ny informasjon. Du kan ikke predikere at heliumballonger er lettere enn luft, bare ved å vite hva en heliumballong er. Du må også vite egenskaper om helium
+    \item[Analytisk kunnskap] Kunnskap som ikke gir oss noen ny informasjon. Du får informasjon bare ved å analysere et begrep. For eksempel: Om en ungkar er ugift, så er "er ugift" ingen ny informasjon, fordi du skjønner fra "ungkar" at han er ugift. 
+\end{description}
+
+Ved å kombinere a posteriori, a priori, analytisk og syntetisk kunnskap, så får vi fire typer kunnskap
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+A posteriori + syntetisk & A priori + syntetisk \\
+\hline
+A posteriori + analytisk & A priori + analytisk \\
+\hline
+
+\end{tabular}
+\end{table}
+
+
+\section{Finnes alle fire typer kunnskap?}
+
+
+\begin{description}
+    \item[analytisk a posteriori] Det finnes \textbf{\textit{ikke}} analytisk a posteriori kunnskap. Hvis vi har analytisk kunnskap, så er det allerede omfattet av begrepet. Men da trenger man ikke noe sanseerfaring for å vite det relevante faktumet; man får kunnskapen ved å analysere det relevante begrepet.
+    \item[syntetisk a posteriori] Vi har syntetisk a posteriori kunnskap. Kunnskap om at heliumsballongen er lettere enn luft, er a posteriori, ettersom den er basert på sanseerfaring. Den er syntetisk fordi predikatet "er lettere enn luft" ikke omfatter begrepet selv. De fleste vitenskapene hvor vi får kunnskap fra observasjoner er syntetisk a posteriori kunnskap. 
+    \item[analytisk a priori] Informasjonen om at ungkarer er ugifte omfattes allerede av begrepet om en ungkar. VÅr kunnskap om at ungkarer er ugifte, er dermed analytisk
+\end{description}
+
+\section{Hvordan er syntetisk a priori-kunnskap mulig?}
+
+\textbf{\textit{Syntetisk a priori}} kunnskap er den siste av de 4 typene. Og det er ikke bred enighet om det finnes eller ei. Det ville være kunnskap som ikke er basert på erfaring, eller som man kan få ved å analysere et begrep (analytisk). \\
+
+Matematikken gir oss mange eksempler på syntetisk a priori kunnskap ifølge Kant. $ 7+5=12 $ er ikke syntetisk, fordi vi kan ikke skjønne ut fra $ 7+5 $ at det er lik 12. Dermed hevder Kant at slik kunnskap er syntetisk, og a priori, fordi vi ikke bruker noen erfaring for å skjønne det. Geometrien tilbyr også samme perspektiv. Vi trenger ikke erfaring for å skjønne at korteste avstanden mellom to punkter er en rett linje. Men heller ikke begrepet "er en rett linje" omfattes av begrepet "korteste avstand mellom to punkter". Dermed er geometrisk kunnskap også syntetisk. Syntetisk a priori ligger ifølge Kant som fundament for matematikk og fysikk. 
+
+
+
+\section{Kants kopernikanskje revolusjon}
+
+Hvordan får vi kunnskap om tall og geometri uten sanser eller erfaring? Kant mener at for å finne svaret trenger vi en radikalt ny måte å tenke om forholdet mellom kunnskap og verden på: \\
+
+\textbf{\textit{Kanskje forholdet mellom gjenstandene og måten vi tenker på dem på, er den stikk motsatte. Gjenstandene må passe med vår forståelse}}\\
+
+
+Dette kalles for \textbf{\textit{Kants kopernistiske revolusjon}}
+
+Kopernikus var en astronom. Folk før Kopernikus trodde at solen gikk rundt jorden. Han beviste det stikk motsatte, at jorden går rundt solen. Med sin kopernistiske vending, mener Kant at vi kan forklare syntetisk a priori kunnskap.\\
+
+
+Erfaringserkjennelse er bygd opp av
+
+\begin{enumerate}
+    \item det vi mottar gjennom sanseinntrykk
+    \item det vår egen erkjennelsesevne selv bidrar med.
+\end{enumerate}
+
+Ifølge Kant må vi også ha en grunnleggende forståelse av tid, geometri, forestillinger av naturen. Disse grunnforestillingene har ifølge Kant en a priori status: De utgjør forutsetningene for å kunne erfare en verden av sansbare objekter. A priori kunnskap utledes fra disse selvfrembrakte grunnforestillingene.\\
+
+Begrep som punkt, linje, trekant og sirkel er regler vi bruker for å aktivt skape geometriske figurer.
+
+Kant sa : \textbf{\textit{"Vi kan ikke tenke noen linje uten å trekke den i tankene"}}.
+
+Å ha evnen til å konstruere geometriske begreper er betingelsen for å kunne erfare de geometriske figurene som disse begrepene omhandler: Derfor er den a priori.
+
+\subsection{Matematikk og etikk}
+
+Fra matematikk til etikk. Hvordan vet vi hva som er etisk riktig og galt. Er det noe vi har av erfaring? Er etisk kunnskap a posteriori? Kan du forstå hva som er rett og galt bare ved å forstå begrepene, altså analytisk? Eller er etikk bare et nytt eksempel på syntetisk a priori kunnskap?
+
+
+\section{Einsteins forklaring på geometrisk kunnskap}
+
+Einstein sier selv at geometriens lover, som andre matematiske lover, er absolutt sikre og ubestridelige. Det er slik nettopp fordi det ikke er basert på sanseerfaring (a priori). Einsteins forklaring er veldig forskjellig fra Kants.\\
+
+
+Einstein skiller mellom ren og anvendt geometri. 
+
+\begin{description}
+    \item[ren geometri] Delen som omhandler formale og logiske forhold mellom grunnleggende matematiske prinsipper. Vi har objekt som punkter og linjer, så studerer vi det som logisk følger av de grunnleggende prinsippene vi har definert. 
+    \item[Anvendt geometri] Noe helt annet. Den handler om den geometriske strukturen til det faktiske fysiske rommet rundt oss. Dette er en del av fysikk, empirisk vitenskap. Dette er ikke analytisk, men heller ikke a priori. Den er a posteriori
+\end{description}
+
+
+Det stemmer at ren geometri er a priori, men fra Kant hevder Einstein at denne geometrien overhodet ikke handler om det faktiske fysiske rommet. Den handler bare om de abstrakte logiske og formale forholdene mellom definisjoner og aksiomer\\
+
+
+For å forstå forskjellen på ren og anvendt geometri, viktig å vite at matematikere på 1800 tallet fant ut at det finnes flere forskjellige rene geometrier. Ikke bare den euklidiske, hvor gitt enhver linje l og et punkt utenfor denne linjen, finnes det nøyaktig en annen linje som går gjennom p, men ikke l. I ikke-euklidiske rom, gjelder ikke dette.\\
+
+Dette skapte et problem. Hvilken av disse geometriene beskriver det fysiske rommet rundt oss? Einstein mener dette må svares med observasjoner og erfaring. Vi vet ikke a priori hvorvidt et fysisk rom er euklidisk.\\
+
+
+Einstein mener skillet mellom ren og anvendt geometri, kan kvitte oss med problemet om syntetisk a priori kunnskap som plagde Kant: Så fort vi har trukket dette skillet, ser vi at en del eller en type geometri er a priori (nemlig anvendt geometri). Men hverken den ene eller den andre er både syntetisk og a priori, og vi trenger derfor ikke noe slikt som Kants kopernikanske revolusjon.\\
+
+
+
+Skillet mellom ren og anvendt geometri er nødvendig for å forstå hans relativitetsteori. Denne teorien handler om geometrien til fysiske rom. Oppsummert, er påstanden hans at fysisk rom ikke kan skilles fra fysisk tid. Nest fundamentalt lever vi i 4 dimensjonalt romtid, med tre romlige dimensjoner og en tidsdimensjon. Det viktigste bidraget Einsteins relativitetsteori var å gi den riktige beskrivelsen av den anvendte geometrien til dette 4D rommet. Romtid er ikke euklidisk.
+
+
+
+
+
+
+
+
+
+\end{document}

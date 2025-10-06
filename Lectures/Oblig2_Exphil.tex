@@ -1,0 +1,111 @@
+\documentclass[12pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref} % legg dette i preamble
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+\newenvironment{oversettelse}{\begin{quote}\itshape\textbf{Oversettelse: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Exphil03 Obligatorisk oppgave nr. 2}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\begin{argument}
+    ``menneskesjelen, som kun er en tenkende substans, kan styre kroppens ånder [esprits] og forårsake frivillige handlinger''
+\end{argument}
+
+\section{Innledning}
+
+Descartes er en filosof fra 1600-tallet som er grunnleggeren av dualisme, og har tro på et mekanistisk univers. Ifølge Descartes, er et substans noe som kan eksistere uten noe avhengighet. Descartes hevder at sjelen er en immateriell substans som likevel kan påvirke kroppen vår og forårsake frivillige handlinger. Fra dualismen er kroppen et annet materielt substans. Elisabeth spør så hvordan noe immaterielt kan påvirke noe materielt. Hvordan kan noe ikke-utstrakt påvirke noe utstrakt? Problemstillingen i denne argumenterende teksten er å utforske hvordan Descartes kan forsvare at sjelen styrer kroppen, og hvordan Elisabeth utfordrer dette.
+
+\section{Bakgrunn}
+
+Dualisme innebærer eksistens av to substanser, den fysiske og den mentale. Det fysiske skulle være styrt av mekanistiske lover, som i bunn og grunn betyr at hele universet er en maskin, som kjører uten en grunn eller en mening (res extensa)
+
+\begin{oversettelse}
+    Res extensa: Fra latin til engelsk: ``Extended thing``. Fra Engelsk til Norsk: ``Utstrakt ting``
+\end{oversettelse}
+
+Det mentale substanset er ikke-utstrakt, og har ingen påvirkning fra den mekanistiske maskinen
+
+\begin{oversettelse}
+    Res Cogitans: Oversatt fra lating til engelsk: "thinking thing". Fra Engelsk til Norsk: "Tenkende ting" 
+\end{oversettelse}
+
+
+
+\section{Descartes argument}
+
+Hovedpoenget i Descartes sitt argument er at sjelens ånder, kan kommunisere med den mekanistiske verden gjennom pinealkjertelen. Dette var en plass inne i hjernen. Nå var ikke nevrovitenskap noe som eksisterte da Descartes levde, men han hadde en metaforisk forståelse av faget flere århundre før den vitenskapen ble oppfunnet
+
+\begin{argument}
+    \textbf{\textit{Esprits}} - dyreånder som reiser fra pinealkjertelen og til kroppen vår, som lager bevegelse
+\end{argument}
+
+Kjedereaksjonen fra sjel til kropp kan ses på slik fra Descartes sitt argument.
+
+minne $\rightarrow$ følelse (tristhet) $\rightarrow$ esprits $\rightarrow$ neuroner $\rightarrow$ tårer
+
+
+En sterk antagelse Descartes tar, er at sinnet vårt er ikke ustrakt og immateriell.
+
+\section{Elisabeths kritikk}
+
+Elisabeth sin hovedkritikk, er at for at noe fysisk skal kunne påvirkes, så må det være noe som virker på den. Argumentet til Descartes faller da sammen om vi antar at Elisabeth har rett. 
+
+Kravet som Elisabeth stiller til bevegelse, er at den bevegende tingen dyttes på en spesiell måte, eller ved de spesielle egenskapene, og at det som virker på objektet er utstrakt. Siden Descartes har definert sjelen som noe immaterielt og tenkende, er det uforenlig at sjelen skal kunne ha noen påvirkning på den mekanistiske verden. 
+
+\section{Analyse/Drøfting}
+
+Nå som både Descartes og Elisabeth har presentert sine argument, kan jeg drøfte uenigheten deres. Problemet om mental kausalitet omhandler hvordan mentale tilstander kan ha noen fysisk virkning på verden rundt oss. Hvis Descartes har rett, og sinnet er immaterielt, så virker det umulig å forstå at det kan forårsake fysisk bevegelse uten å bryte med mekanistiske lover. 
+
+Descartes prøver å forsvare dette med at mediumet mellom kropp og sjel foregår i pinealkjertelen, uten å eksplisitt forklare hvordan. Dette kan ses på som et metaforisk forsøk på å forklare kommunikasjon mellom abstrakthet og utstrakthet. I det øyeblikket sjelen påvirker mekaniske verden, synes det å ødelegge hele fundamentet for dualismen, nemlig eksistens av tenkende og immateriell sjel og utstrakte og materielle kropp.
+
+Ved at Elisabeth insisterer på en fysisk kausalitet mellom utstrakte objekter, avslører Elisabeth at Descartes sin teori ikke kan forene sitt egne mekanistiske syn med troen på en immateriell sjel
+
+\section{Konklusjon}
+
+\textbf{\textit{Oppsummer hva Descartes mente og hvorfor han møtte problemer.\\
+Fremhev Elisabeths betydning: hun peker på mind–body problemet som fortsatt diskuteres i moderne filosofi og kognitiv vitenskap.\\
+Avslutt med å vise at diskusjonen mellom dem illustrerer et grunnleggende filosofisk problem: kan det finnes kausal interaksjon mellom to helt forskjellige substanser?}}
+
+\section{Referanser}
+
+
+\begin{itemize}
+    \item Substans av Descartes: \url{https://plato.stanford.edu/entries/substance/}.
+    \item PinealKjertel Descartes: \url{https://www.britannica.com/science/death/Descartes-the-pineal-soul-and-brain-stem-death}
+    \item Descartes til Elisabeth 21. mai 1643 
+\end{itemize}
+
+
+
+\end{document}
