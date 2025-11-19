@@ -1,0 +1,95 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+\usepackage{multicol}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 16 - Er moralen objektiv?}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+
+\end{document}

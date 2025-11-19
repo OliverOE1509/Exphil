@@ -1,0 +1,187 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 13 - Hvordan skal vi leve? Dyd og lykke}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\begin{flushleft}
+    Aristoteles stilte seg spørsmålet om hvorfor vi gjør ting og hvordan vi skal leve. Han påpekte at hvis alt vi gjør har instrumentell verdi, dvs. det har fordi det er et instrument, eller verktøy, som muliggjør noe annet, men ingenting har verdi eller et mål i seg selv, så er livet strengt tatt meningsløst. Aristoteles kalles noe som vi kan strekke oss etter det høyeste gode og mener de fleste av oss antar at det finnes noe slikt, noe som gjør menneskelivet meningsfullt, og som vi alle sikter mot. Dette kalles for \textbf{\textit{lykke}}.
+\end{flushleft}
+
+\begin{quote}
+    Aristoteles: for å oppnå lykke i livet trenger vi ikke bare teoretisk kunnskap om hva som er godt, men også praktisk kunnskap. Evnen til å vite hvordan vi blir gode mennesker som handler godt. 
+\end{quote}
+
+
+\begin{flushleft}
+    Vi spør oss selv her altså milleniumsspørsmålet
+\end{flushleft}
+\begin{quote}
+    \textbf{\textit{Hva er meningen med livet?}}
+\end{quote}
+og vi har flyttet oss inn i de spørsmålene som kjennetegner normativ etikk
+
+\begin{sectionbox}[Lykke]
+    \begin{flushleft}
+        Vi vet ikke hva som gir oss lykke før vi vet hva lykke er. Fra kapittel 8, vet vi at Aristoteles antar at alle ting har en funksjon og mål. I \textit{Den niklomanske etikk} bruker Aristoteles dette som et premiss for å argumentere for hva lykke er. \textbf{\textit{Enhver tings mål er å realisere sin funksjon på en god måte}}\\
+
+
+        Konklusjonen til Aristoteles er at \textbf{\textit{menneskers funksjon er et liv levd med fornuft}}, kall det også \textit{rasjonell aktivitetet}. Når vi duger godt realiserer vi vårt potensial
+
+        \begin{itemize}
+            \item En kniv sin funksjon er å skjære, og dens mål er å skjære godt. Når den skjærer godt, duger kniven best
+            \item En tulipans funksjon er å ta opp næring, spire, gro og formere seg. En tulipans mål er å gjøre det på best mulig måte.
+        \end{itemize}
+        På samme måte henger funksjon og det høyeste gode, lykke, sammen for mennesket\\
+
+        Hvis du virkelig vil vite hva meningen med livet er, er Aristoteles svar skuffende. Ja et liv uten godteri er fornuftig, men betyr det lykke? Nei. Aristoteles sier hva det vil si å duge som menneske. Ikke ved å liste opp fornuftige ting du burde gjøre, men ved å beskrive en måte å forme oss selv på. Når karakteren vår er formet på en fremragende måte, har den dyd, som er det motsatte av et lastefullt liv.\\
+
+        \begin{quote}
+            \textbf{\textit{Å være dydig betyr å ha fremragende karakter}}
+        \end{quote}
+
+        Noen eksempler på dyder og laster \newline
+        \parbox[t]{0.3\textwidth}{\textbf{\textit{dyder}}
+            \begin{enumerate}
+                \item mot
+                \item rettferdighet
+                \item visdom
+                \item barmhjertighet
+                \item gavmildhet
+                \item tålmodighet
+                \item ærlighet
+            \end{enumerate}}
+        \parbox[t]{0.3\textwidth}{\textbf{\textit{laster}}
+            \begin{enumerate}
+                \item feighet
+                \item grådighet
+                \item latskap
+                \item smålighet
+                \item ufølsomhet
+                \item misunnelse
+                \item skadefryd
+            \end{enumerate}}
+
+       
+    \end{flushleft}
+\end{sectionbox}
+
+\begin{sectionbox}[dyder: de gode karakteregenskapene]
+\begin{flushleft}
+    Vi er interessert i kunnskap om det gode liv fordi vi vil bruke kunnskapen til å handle og leve godt. Så kunnskapen må omsettes til handling, den må være praktisk. Dette innebærer å ikke bare ha innsikt, men også evnen til å handle. Så hvordan blir man et godt menneske? Det er litt som å lære seg å spille saksofon. Du kan lese deg opp i teori på hvordan saksofoner funker, men du vil aldri bli en god saksofon spiller enn mindre du praktiserer. Poenget er at for å bli et godt menneske må vi øve på det. Det er ikke en medfødt ferdighet. For å få til dette trenger vi fornuft, og andre mennesker. Dette er folk som kan oppdra oss, være forbilder og som vi kan samhandle med. Når vi mestrer dette blir det en vane å være et godt menneske, og resultatet blir at karakteren vår formes og blir dydig.\\
+\end{flushleft}
+\begin{flushleft}
+    Hva skal man øve på? Mennesker og handlinger er komplekse og inneholder temperament, følelser, evner, fellesskap rundt oss. Det man øver seg på er \textit{dyd}, dvs. egenskaper ved vår person som gjør at vi forstår og klarer å utføre en handling som er riktig i lys av elementene temperament, følelser osv. Mot er en slik dyd. \\
+\end{flushleft}
+\begin{flushleft}
+    \par Siden mennesker er sosiale vesener, trenger vi mennesker for å realisere vårt potensial som menneske.\\
+\end{flushleft}
+\begin{flushleft}
+    \par Det endelige svaret til Aristoteles på hva som gjør mennesker lykkelige er at et menneske som lever med dyd på best mulig måte, også har det godt. Hen blir kalt lykkelig
+\end{flushleft}
+\end{sectionbox}
+
+
+\begin{sectionbox}[Studiespørsmål]
+\begin{enumerate}
+    \item Hva er Aristoteles argument for at aktivitet i tråd med fornuft er menneskets funksjon?
+    \item Hvordan blir man dydig?
+    \item Hva er forholdet mellom dyd og handling?
+    \item Hvorfor er en dyd en middelvei mellom å overdrive og å være utilstrekkelig?
+    \item Hvordan kan dydene belyse spørsmålet om hvorvidt eutanasi er moralsk akseptabel?
+\end{enumerate}
+
+\textbf{\textit{Dette bør du kunne}}
+\begin{itemize}
+    \item Forklare hva dydsetikk er, og hvordan den kan brukes til å finne ut hvordan vi bør handle
+    \item Forklare hvordan vi blir moralske aktører, dvs. hvordan vi utvikler dyd
+    \item Forklare forskjeller og sammenheng mellom karakter, handling, dyder og laster
+    \item Anvende dydsetikken på spørsmålet om eutanasi
+\end{itemize}
+\end{sectionbox}
+\end{document}
