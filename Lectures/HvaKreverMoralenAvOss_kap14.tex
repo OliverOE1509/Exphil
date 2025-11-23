@@ -1,0 +1,180 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+\usepackage{multicol}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 14 - Hva krever moralen av oss? At vi gjør vår plikt}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\begin{flushleft}
+    Å gjøre det rette er ofte ikke godt. I hverdagen står vi ovenfor valg, og hvis vi ikke tar det rette valget, kan man få dårlig samvittighet. Dette tyder på at når vi velger noe annet enn det rette, er vi klar over at det er det vi gjør, og at det rette er viktigere på noe vis. Dette danner grunnlaget for den normative etiske teorien vi skal ta for oss: \textbf{\textit{pliktetikk}} eller \textbf{\textit{deontologi}}
+\end{flushleft}
+
+\begin{sectionbox}[Plikt]
+    \begin{flushleft}
+    Når vi står ovenfor handlinger som vi merker vi burde gjøre, som ikke trenger en spesiell grunn, så kaller Immanuel Kant i sin moralfilosofi dette for en \textbf{\textit{plikt}}. Dvs. at det er noe vi bør gjøre. En plikt kalles for \textbf{\textit{normativ}}. 
+    \begin{quote}
+        \textbf{\textit{normativ etikk:}} Du \textit{bør} ikke lyve
+    \end{quote}
+    Normativ etikk er ikke en oppskrift vi skal følge blindt for å være dydige, men det gir oss en pekepinn på hva som er galt og ikke.
+
+    \begin{quote}
+        \textbf{\textit{For eksempel:}} Jeg har lånt noenting av en kompis. Jeg kan velge å ikke levere den, men jeg har en \textit{pliktfølelse} på at jeg burde gjøre det. Hva om kompisen har glemt det jeg lånte? Jeg har da fortsatt den samme pliktfølelsen til å levere den tilbake
+    \end{quote}
+
+    I forordet til Grunnlegging av moralens metafysikk er Kant bekymret for at moralen bare har sitt grunnlag i lydighet fra autoriteter. Uansett om dette er foreldrene våre, trenerne våre, lærererne eller statsoverhoder, så er det verdt å stille seg kritisk til deres legitimitet. Er det en grunn til å følge regler hvis opphavet til deres normativitet er kun makt eller egeninteresse? Det er god grunn til å tro at moralen forsvinner for kritiske og opplyste mennesker, om vi ikke kan finne en grunn til å tro på autoritære regler. Dermed gjør Kant det til sitt prosjekt å undersøke plikten
+
+    \begin{quote}
+        \textbf{\textit{Hva er plikt, hvor kommer den fra og hvorfor skal vi adlyde den? -Kant}}
+    \end{quote}
+    
+    Dette kalles for deontologi, læren om plikt. Kant definerer plikt som
+    \begin{quote}
+        \textbf{\textit{Plikt:}} nødvendigheten av en handling ut av aktelse for loven
+    \end{quote}
+    Loven her er ikke gitt av ytre autoritet, men har sitt grunnlag i fornuften. Vi har sett at handlingsregler og moralske plikter kan skilles mellom. En moralsk plikt er et imperativ, "fortell sannheten". Kant kalles plikter for absolutte eller kategoriske. En handlingsregel er en handling som gir høyest mulig nytte. Jeg kan si at "fortell sannheten, fordi det gagner alle på sikt", det er en handling som jeg kan ta fordi det har en positiv konsekvens. 
+
+    \begin{quote}
+        Tilbake til eksemplet, jeg kan beholde boken jeg har lånt av kompisen, og siden han er glemsk, så gir det høyest nytte at jeg beholder den. Fordi han ikke savner den og jeg vil lese den. Men det er en moralsk plikt å uansett gi den tilbake
+    \end{quote}
+    
+    Det som gjør at handling er moralsk, er at den er gjort ut fra respekt for moralens lover. Ikke ut fra ønske om å oppnå gode konsekvenser. Fornuften gjør det mulig å gi oss selv "imperativer", dette er befalende setninger som "les pensum" og "ring mammaen din"
+\end{flushleft}    
+\end{sectionbox}
+
+\begin{sectionbox}[Universalitet og autonomi]
+    \begin{flushleft}
+        Kant hjelper oss ikke bare med å forstå at fornuften ikke bare er et verktøy som hjelper oss forstå hvilke handlinger som lar oss nå våre mål, men at fornuften i seg selv er opphavet til handling. Vi må se på Kants forståelse av vilje. Vilje kan styres av begjør og tilbøyeligheter, men vilje kan også motiveres av fornuft. Tilbøyeligheter gir oss subjektive grunner til å handle, mens fornuft gir oss objektive grunner. Når Kant beskriver en god vilje, beskriver han ikke noe som føles godt eller har gode konsekvenser, men en vilje som er bestemt av deb objektive moralloven. Det er TO viktige ideer å se etter å forsøke å se i tekstutdragene i boken.\newline
+    
+        Den første er at fornuften er den samme i alle. Den er allmenn eller universell. Fornuften kan fortelle oss hva \textit{alle} bør gjøre, uavhengig av personlige preferanser. Fornuften kan lede oss til \newline
+    
+        Den andre er at fornuften er det som gjør oss frie. Fornuften lager imperativer som er plikter eller fornuftige anbefalinger som står i opposisjon til lyster og egeninteresser vi kanskje heller vil tilfredsstille. Men en konsekvens av å være et fornuftsvesen er at menneske har \textbf{\textit{"frihet til å gi seg selv lover"}}. Her har Kant et annerledes bilde av lover enn det tradisjonelle vi vet. 
+
+        \begin{quote}
+            \textbf{\textit{Frihet ifølge Kant:}} Det å selv komme frem til verdier og prinsipper som vi kan begrunne, og som vi velger å la styre liv, er en unik menneskelig egenskap. Vi kaller dette \textit{autonomi}
+        \end{quote}
+
+        Vi kommer frem til disse verdiene og prinsippene ved å resonnere. En hund som løper ned en bekk er ikke egentlig frie, fordi prinsippet som beveger de, er ikke valgt av dem selv - det er naturlovene som virker i dem. Et MENNESKE derimot kan gjennom bruk av fornuft komme frem til noe som er verdifullt i seg selv, som menneskeverd.\newline
+
+        Når vi setter disse to ideene sammen ser vi kjernen i Kants etikk: 
+        \begin{quote}
+            \textbf{\textit{Siden fornuften er universell, vil alle frie, autonome aktører komme frem til og gi seg selv de samme lovene når de bruker fornuften på riktig måte}}. 
+        \end{quote}
+    \end{flushleft}
+
+
+    \begin{subsectionbox}[Det kategoriske imperativ]
+
+        Hva var det kategoriske imperativ? Du skal aldri behandle et annet menneske kun som et middel, eller som en ting. Dette er ingen naturlov, det ser vi tydelig. Det er mange mennesker som behandler andre mennesker som mindre verdt.
+
+
+        \begin{quote}
+            \textbf{\textit{Autonomiformuleringen:}} Handle slik at du gjennom dine maksimer kan være en lovgiver for almenne lover
+        \end{quote}
+    \end{subsectionbox}
+\end{sectionbox}
+
+
+\begin{sectionbox}[Studiespørsmål]
+\begin{enumerate}
+    \item Hvorfor er en moral basert på fornuft gyldig for alle mennesker?
+    \item Hvordan kan begreoet om menneskeverd brukes som et kantiansk argument mot eutanasi?
+    \item Hva er forskjellen mellom å handle av plikt og å handle etter tilbøyeligheter? Hvorfor er den første motivasjonen moralsk mer verdifull?
+    \item Hva er autonomi? Kan det velge å avslutte livet sitt være uttrykk for autonomi?
+\end{enumerate}
+
+\textbf{\textit{Dette bør du kunne}}
+\begin{itemize}
+    \item Forklare sammenhengen mellom plikt, fornuft og vilje hos Kant
+    \item Forklare forskjellen på et kategorisk imperativ og en fornuftig handlingsregel
+    \item Beskrive forskjellen på det rette og det gode
+    \item Diskutere forholdet mellom lykke og moralloven i lys av brene til Marai Von Herbert
+    \item Diskutere eutanasi fra et kantiansk perspektiv, som presentert av J. David Velleman
+\end{itemize}
+\end{sectionbox}
+
+\end{document}
