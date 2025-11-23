@@ -1,0 +1,113 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref} % legg dette i preamble
+\usepackage{amsthm}
+\newtheorem{definition}{Definisjon}
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+\newenvironment{oversettelse}{\begin{quote}\itshape\textbf{Oversettelse: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Exphil03 Obligatorisk oppgave nr. 2}
+\author{Oliver Ekeberg}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+Antall ord: 990
+
+\section{Oppgavetekst}
+
+Jeg valgte den første oppgaveteksten (13) om Descartes argumentasjon for at menneskesjelen er en tenkende substans.
+
+\begin{quote}
+    \textit{13. Drøft Descartes’ argumentasjon for at «menneskesjelen, som kun er en tenkende substans, kan styre kroppens ånder [esprits] og forårsake frivillige handlinger» (Elisabeth til Descartes, Haag, 6. mai 1643) i lys av Elisabeths innvendinger (kapittel 9).}
+\end{quote}
+
+
+
+\section{Innledning}
+
+Descartes (1596-1650) oppfattes som grunnleggeren av substansdualisme, nemlig teorien om at sinnet og kroppen vår består av to fundamentalt distinkte og separable substanser, den tenkende sjelen (res cogitans) og den utstrakte kroppen (res extensa). Descartes levde i en tid der troen på et mekanistisk univers stadig ble mer populær, dvs. at naturen kan forklares ved hjelp av fysiske lover og matematiske betingelser (Cappelen, Torsen, Watzl, 2021, kap 9.). Descartes hevder likevel at den utstrakte verdenen kan påvirkes direkte fra sjelen vår, som ifølge han selv er ikke utstrakt. 
+
+\medskip
+Dette møter høflig, men sterk motstand fra Elisabeth av B\"{o}hmen (1592-1662). I Elisabeths og Descartes brevutveksling, våren 1643, spør hun hvordan en ikke-utstrakt sjel kan være kausal for bevegelse i en utstrakt kropp. Oppgaven i denne teksten blir å analysere og drøfte argumentene Descartes lager, og påpeke hvordan Elisabeths innvending viser svakheter i argumentet hans
+
+
+\section{Elisabeths kritikk}
+
+I brevet den 6. Mai 1643, spør Elisabeth av Bohmen hvordan sjelen, som kun er en tenkende substans, kan styre kroppes ånder (esprits) og forårsake frivillige handlinger. (Cappelen, Torsen, Watzl, 2021, s.215-216). Hun viser til at all fysisk bevegelse forutsetter kontakt og utstrekning. Hvis sjelen ikke har utstrekning, virker det umulig at den har kausalitet på kroppen. \\
+
+Elisabeth peker dermed på en motsigelse i Descartes filosofi, nemlig at hvis sjelen er ikke-utstrakt, hvordan kan den påvirke ånder og forårsake frivillig handling? Elisabeth avviser ikke sjelens eksistens, men legger til grunn at antagelsene til Descartes bryter med hans egne krav om klar og distinkt forståelse av substanser. \\
+
+Ved å be Descartes forklare hvordan sjelen virker på kroppen, utfordrer hun substansdualismen, som tolkes som en tidlig adapsjon av egenskapsdualismen, som ble lagd på 1960-tallet av David Chalmers (\textit{Store norske leksikon, n.d.})
+\section{Descartes argument}
+
+Descartes åpner opp sitt svar med å rose Elisabeths spørsmål som et viktig et. Han sier videre at det er to ting å si om den menneskelige sjel, nemlig at sjelen tenker, og siden sjel og kropp er forenet (\textit{Descartes til Elisabeth, 21. Mai 1643, gjengitt i Cappelen, Torsen \& Watzl, 2021, s.217}), kan sjelen virke i og påvirkes sammen med den. \\ 
+
+Descartes antar først at det finnes visse opprinnelige ideer inne i oss. Han skiller mellom tre type ideer.
+
+\begin{itemize}
+    \item Ideen om kroppen: Utstrekkelse, som form og bevegelse følger fra
+    \item Ideen om sjelen: Tanker, fornuft og vilje.
+    \item Ideen om begge to: Opplevelsen av at sjel og kropp virker sammen. Som når viljen får kroppen til å bevege seg, og når kroppen påvirker sinnet gjennom følelser og sanseinntrykk.
+\end{itemize}
+
+(\textit{Descartes til Elisabeth, 21. Mai 1643, gjengitt i Cappelen, Torsen \& Watzl, 2021, s. 217})
+
+Det andre Descartes antar, er at man må holde ideene adskilt. For å forklare hvordan man begriper de ideene som hører til sjelens \textit{forening} med kroppen, kan man ikke bruke ideer som hører distinkt enten til sjelen eller kroppen. Elisabeth spør hvordan sjelen kan berøre kroppen ved hjelp av mekaniske prinsipp, men berøring er en egenskap som tilhører ideen om utstrekning. Descartes har i Meditasjonene forsøkt å gjøre sjelens ideer begripelige, og å skilne de mellom kroppens ideer. For å forklare foreningen av de, sier han \begin{quote}
+    Vi kan ikke lete etter disse opprinnelige ideene noe annet sted enn i sjelen vår
+\end{quote} Han sier dette for å få frem at vi må oppleve foreningen selv, den kan ikke forklares. (\textit{Descartes til Elisabeth, 21. Mai 1643, gjengitt i Cappelen, Torsen \& Watzl, 2021, s. 218}). Vi erfarer dette gjennom opplevelser som viljestyrte bevegelser og sanseinntrykk. \\
+
+Et eksempel Descartes bruker i brevet sitt er hvordan folk tror at tyngde er en egenskap i tingene. Men dette er feil måte å tenke på ifølge Descartes. Han mener at en stein kan ikke utstyres en indre kraft (tyngdekraft) som handler av seg selv, fordi da får materielle ting en egenskap som tilhører ideen om sjelen. 
+
+\section{Analyse/Drøfting}
+
+Elisabeth benekter som sagt ikke dualisme i seg selv, men hun kan ikke anta at sjelen er ikke-utstrakt. Hun viser ved sitt \textit{reductio ad absurdum} argument at dersom sjelen mangler utstrekning, kan det ikke påvirke materie. For at noe fysisk skal virkes på, må det virkes på av noe annet utstrakt, og dette strider mot Descartes definisjon av sjelen som en ren tenkende substans, og samtidig kan styre kroppens ånder, men vi kan ikke forstå mekanismen bak (\textit{Cappelen, Torsen \& Watzl, 2021, s. 217-218}). \\
+
+
+Descartes peker på at Elisabeth blander begreper som tilhører ulike ideer. Man kan ikke forklare foreningen av kropp og sjel med mekanistiske prinsipp, fordi de tilhører ideer om utstrekning, noe sjelen ikke har, ifølge Descartes. Foreningen må dermed forstås gjennom en egen ide om forening vi finner i sjelen allerede. Vi kan dermed ikke forklare ideen om foreningen mellom kropp og sjel. Når vi beveger kroppen frivillig, eller får en reaksjon av en følelse, opplever vi at sjel og kropp virker sammen. \\
+
+Brevet fra 21. Mai 1643, redder ikke argumentet om to distinkte og separate substanser fra Elisabeths krav. Hun ber om en kausal forklaring. I stedet for å forklare hvordan sjelen påvirker kroppen, påpeker han at det må være uforståelig. Det gjør at argumentet ikke tilfredsstiller klar og distinkt forståelse. Elisabeths innvending viser at substansdualismen hviler på forhold mellom sjel og kropp som ikke kan forklares uten å bryte Descartes egne krav om klar og distinkt forståelse. \\
+
+Det kan tolkes at Elisabeth peker mot et moderne syn på dualisme, nemlig \textit{egenskapsdualisme}. Dette synet forsøker å bevare sjelen som immateriell, samtidig som man ikke innfører en separat distinkt substans. 
+\section{Konklusjon}
+
+Elisabeths innvending spør hvordan noe ikke-utstrakt kan virke på noe utstrakt, og spør om en mekanistisk forklaring. Descartes svarer at det er galt å sammenligne ideer som tilhører ulike områder, utstrekning for kroppen og tanke for sjelen. Foreningen mellom disse må erfares, ikke forklares mekanistisk. \\
+
+Fra drøftingen, ser vi at Descartes ikke gir noe svar på Elisabeths problemstilling. Svaret hans redder ikke dualismen fra Elisabeths kritikk, men flytter problemet fra forklaring til erfaring. Likevel peker utvekslingen på et mer moderne syn på dualisme: egenskapsdualisme, hvor det mentale og fysiske ikke forstås som distinkte substanser, men som egenskaper.
+
+\section{Referanser}
+
+
+\begin{itemize}
+    \item Store norske leksikon. (n.d.). \textit{Dualisme}. Hentet 15/10/2025, fra \url{https://snl.no/dualisme}
+    \item Cappelen, H., Torsen, I. \& Watzl, S. (2021). \textit{Vite, være, gjøre: Exphil}. Gyldendal
+\end{itemize}
+
+
+
+\end{document}
