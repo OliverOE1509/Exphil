@@ -1,0 +1,118 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-40pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 12 - Biologisk kjønn, sosialt kjønn og den sosiale konstruksjonen av virkeligheten}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\begin{sectionbox}[Hva er sosial konstruksjon?]
+Her tar vi for oss følgende?
+\begin{quote}
+    Hva består egentlig forskjellen mellom mann og kvinne av?
+\end{quote}
+
+Forfatteren Sebastian Watzl sier at det hvorvidt en person er gutt eller jente deler den personen i et stort determinert liv. Altså, kjønn er korrelert med om du mister håret i 50-årene, havner i fengsel, eller hva slags lønn du får når du blir voksen.
+
+Denne debatten om det virkelig finnes to kjønn, har blitt med på å dele folk inn i to politiske sider. Er du konservativ eller progressiv? venstreorientert eller høyreorientert? 
+
+\end{sectionbox}
+
+\begin{sectionbox}[Å konstruere begreper]
+\begin{flushleft}
+    Vi skjelner mellom den \textbf{\textit{sosiale konstruksjonen av begreper og ideer}} på den ene siden og den \textbf{\textit{sosiale konstruksjonen av gjenstander}} på den andre\\
+
+    \begin{quote}
+        Hva er begreper? Haslanger sier: De hjelper oss å organisere fenomener. De er kognitive verktøy
+    \end{quote}
+
+    Vi bruker begrep til å klassifisere enkelte gjenstander. For eksempel frukt og grønnsaker
+
+    Ifølge det Haslanger kalled det "vanlige synet", endres hvilke begreper vi bruker over tid. Haslanger argumenterer for at ettersom begreper er kognitive verktøy, må vi tenke på praksisene de brukes innenfor, og hvilke hensikter de skal ha. 
+\end{flushleft}
+\end{sectionbox}
+
+\end{document}
