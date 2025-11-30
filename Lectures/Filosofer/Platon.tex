@@ -1,0 +1,242 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+\usepackage{multicol}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    backgroundcolor=gray!10,
+    linecolor=gray!70,
+    linewidth=2pt,
+    topline=false,
+    bottomline=false,
+    rightline=false,
+    leftline=true,
+    innerleftmargin=10pt,
+    innertopmargin=6pt,
+    innerbottommargin=6pt,
+    skipabove=10pt,
+    skipbelow=10pt,
+    leftmargin=0pt,
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+        {\bfseries #1}\\[-2pt]
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 17 - Den sosiale kontrakten - hvorfor trenger vi stat og myndighet?}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\begin{sectionbox}[Menon]
+Det er det gode liv og etikk Platon satte lys på i dialogen Menon. Vi har dygder og laster. Sokrates er ikke tilfreds med å definere dygd med noen eksempler og vil gå et skritt videre.\\
+
+\begin{subsectionbox}[Platons idelære]
+Platon hadde ingen lære spesifikt, men hadde kom opp med noe som heter idelære, eller læren om former. Den går ut på at det finnes en verden vi kan se med sansene våre, og en annen høyere ideverden hvor alt er perfekt. Det finnes en ide om (nesten) alt vi ser. En rose for eksempel er ikke en rose for alltid. Den kan vissne og dø ut, men "ideen" om en rose varer evig.\\
+
+
+På samme måte mente Platon at sjelen tilhører denne ide verdenen og at sjelen er dermed udødelig og evig. Sjelen består av tre aspekter; fornuft, det gode aspektet og det vonde aspektet.\\
+
+Platon nevner et eksempel med en vogn. Vognføreren er foruften, og er festet med to hester. Den ene hesten representerer begjør og lidenskap og trekker i feil retning. Den andre hesten representerer det gode og trekker i riktig retning. Fornuftens oppgave er å styre hestene slik at det gode kommer dit den skal, og det vonde (lidenskap og begjær) kommer til sitt sted.\\
+
+
+En tredje sentral Platonsk ide er erkjennelsen av hvordan vi lærer, eller \textbf{\textit{gjenerindring}}. Det vi kan se og lukte er bare blanke kopier av ideen. Ved Sokratisk metode kan vi gjenerindre de ideene vi har glemt. Svaret ligger altså ved sjelens udødelighet. Siden sjelen er udødelig, eksisterte den før vi ble født. Dermed vil Sokratisk metode hjelpe oss å gjenerindre disse ideene. Tenk for eksempel på en firkant. Vi vet at den har fire kanter fordi ideen om en firkant er evig, og ved å gjenerindre, kan vi altså "komme på" at en firkant har fire kanter.
+\end{subsectionbox}
+
+\begin{subsectionbox}[Kan dygd læres?]
+
+Menon har fått i oppgave å definere hva dygd er av Sokrates. Sokrates vet oppriktig ikke. Menon definerer dygd som evnen til å påta seg fine ting. Sokrates sier så at en tyv kan påta seg fine ting, men å stjele er ikke en fin dygd. Sokrates legger til at rettferdighet er en dygd, men man kan ikke definere dygd ved å gi eksempler. Jeg kan ikke definere frukt ved å nevne en appelsin som et eksempel.
+
+\end{subsectionbox}
+
+\begin{subsectionbox}[Menons paradoks]
+Hvis du vet hva du søker viten etter, vet du det allerede. Hvis du ikke vet hva du søker viten etter, er det umulig å lete etter den viten. Dermed er det poengløst å lete etter viten.\\
+
+Tenk deg at en snekker gir deg en verktøykasse, og ber deg lete etter en skrutrekker. Hvis du ikke vet hva en skrutrekker er, hvordan skal du finne den? På samme måte er det med dygd. For å finne ut hva dygd er, må du ha en ide om hva en dygd er. Menon mener derfor at søken etter dygd er umulig
+\end{subsectionbox}
+
+\begin{subsectionbox}[Gjenerindring]
+Sokrates sitt svar på Menons paradoks er \textbf{\textit{gjenerindring}}. Siden sjelen er udødelig, har den lært alt mulig som finnes melom himmel og helvete. Derfor går all mulig læring ut på å \textit{gjenerindre}\\
+
+Det er altså umulig å sette seg på lærebenken og lære hva dygd er. Det må huskes eller gjenerindres fra ideen om dygd. Dette er fordi sjelen har glemt alt når den kommer til vår kropp. I eksemplet om slavegutten, så gjenerindrer slavegutten et problem om geometri. Sokrates lærer ikke gutten noen ting, men stiller spørsmål slik at slavegutten kommer frem til problemet. Slavegutten har gjenerindret svaret på geometri problemet. 
+
+\begin{quote}
+    "Hvis han ikke lærte dette i dette liv, er det klart at lærte det i et annet et?" spør Sokrates
+\end{quote}
+
+Gjenerindringsargumentet er viktig for Sokrates fordi det støtter argumentet om at sjelen er udødelig. \\
+
+Det mest sentrale Platonske hovedtankene er 
+\begin{enumerate}
+    \item Sjelens udødelighet
+    \item Gjenerindringslæren
+\end{enumerate}
+
+\end{subsectionbox}
+
+
+\begin{subsectionbox}[Riktig oppfatning og viten]
+
+Vi kan si at hvis man er på lærebenken og lærer ting, så lærer man bare oppfatning om det. 
+\begin{itemize}
+    \item Feil oppfatning: Du har et svar, du kan ikke forklare det, og det er feil
+    \item Riktig oppfatning: Du har et svar, du kan ikke forklare det, og det er riktig
+    \item Viten: Du hat et svar, du kan forklare det og det er riktig.
+\end{itemize}
+
+Ta for eksempel at jeg har en riktig oppfatning av hvor noe er. Dvs. at jeg vet hvor det er, men kan ikke vise veien. Jeg har aldri gått den veien. En som \textit{viten} om hvor noe er, kan vise veien fordi han har kunnskap om hvor veien går.\\
+
+Det samme kan man si om å hva dygd er. Du kan få en oppfatning av hva det er med eksempler, men bare med gjenerindring kan du få viten om det. Dette får du ved å \textit{tenke selv}
+
+\end{subsectionbox}
+
+\begin{subsectionbox}[Sentrale begreper]
+\begin{enumerate}
+    \item Elenchos
+    \item Udødelig sjel
+    \item Sjelevandring
+    \item Ideene/formene
+    \item Idelæren
+    \item Menons paradoks
+    \item Gjenerindring
+    \item Dygd
+    \item Sann oppfatning
+    \item Viten
+\end{enumerate}
+\end{subsectionbox}
+\begin{subsectionbox}[Oppsummering av Menon]
+Platon spør via sitt talerør Sokrates hva dygd er, og om dygd kan læres. Det kommer frem at dygd er knyttet til viten. Man må vite hva det gode er, før å kunne gjøre det gode. Alle mennesker trakter etter det gode, men ikke alle vet hva det gode er. Bare den som vet dette, kan være god eller dygdig. Menons paradoks går ut på at det er meningsløst å søke etter viten om noe: For enten vet man det, og ikke trenger lete, eller så vet man ikke, og kan da heller ikke vite om man har riktig svar. Dygd kan ikke lære, men det kan gjenerindres. For sjelen er udødelig, og har viten om alle ting, inkl. dygd og de Platonske ideer.
+\end{subsectionbox}
+
+\end{sectionbox}
+
+\begin{sectionbox}[Staten]
+
+
+Platons staten er en annen dialog mellom Platon og Sokrates, og en mann Glaukon som deltar. De tar for seg hvordan en ideell stat burde styres. Denne staten skal fungere så best som overhodet mulig, ved at folk gjør de oppgavene de er best egnet til. \\
+
+Det er to sentrale poeng her.
+\begin{enumerate}
+    \item Menn og kvinners natur er like med henblikk på den evnene som skal til for å kunne styre i idealstaten.
+    \item Ikke hvem som helst bør få barn i denne staten - bare de beste skal få barn.
+\end{enumerate}
+
+Platon vil oppnå det andre ved å bruke en fikset loddtrekning om hvem som skal få lov til å reprodusere seg. De beste "vinner" dette.\\
+
+For å unngå at klassene misbruker sin posisjon, skal de to øverste klassene ikke kunne gifte seg, og barna skal oppdras av samfunnet. Skulle det fødes barn med handikapp, skal de ikke få leve. Den øverste klassen skal ikke ha lov til å ha eiendom, da dette kan føre til misbruk og grådighet.\\
+
+
+Svaret på disse ideene får vi ved å gå veien om hans forestilling om sjelen, som har tre aspekt
+\begin{enumerate}
+    \item Fornuft
+    \item Vilje
+    \item Begjær
+\end{enumerate}
+
+Fornuftens dygd er visdom, viljens dygd er mot og begjærets dygd er måtehold. Når det er harmoni mellom disse oppnås \textit{rettferdighet}, som er den fjerde av de platonske dygdene.\\
+
+Platon er skeptisk til demokrati. Da gjør man ikke det man er best egnet til. Lederne blir valgt på tvilsomme grunnlag, av uvitne personer. Platons idealstat er udemokratisk og lagd av tre klasse;
+\begin{itemize}
+    \item Lederne
+    \item Vokterne
+    \item Arbeiderne
+\end{itemize}
+
+For å finne ut hvem som er best til å gjøre hva, skal de beste bestemmes ut fra et utdanningssystem. Slik hodet og fornuften styrer kroppen, slik bør de klokeste (filosofene) styre staten.\\
+
+Platon tenker seg at statens oppbygning samsvarer med sjelens, husk vognføreren. Slik hver enkelt sjelsdel har sin dygd, slik må det også være med de enkelte klasser i staten. 
+\begin{itemize}
+    \item Lederne skal ha dygden visdom
+    \item Vokterne må ha mot
+    \item Arbeiderne må ha måtehold
+\end{itemize}
+
+Om staten svarer til dette, blir den rettferdig. Hovedpoenget er at alle gjør de oppgavene de er best egnet til. \\
+
+Platon vet at det er forskjell på kvinner og menn. Men han sier at kvinnen og mannen skal de samme naturanlegg for å være voktere når man ser bort fra forskjell i styrke.\\
+
+Han vil at ingen kvinner og menn skal være par, og at ingen barn skal kjenne foreldrene sine.
+
+\begin{subsectionbox}[Man bør avle frem et godt folk]
+
+Om staten skal bli så bra som overhodet mulig, bør ikke hvem som helst få barn. Skulle noen mindreverdige barn bli født, burde de bli forlatt i skogen til å dø.
+
+\end{subsectionbox}
+
+\begin{subsectionbox}[Sentrale begrep]
+\begin{enumerate}
+    \item Idealstat
+    \item Sjelens tredeling (fornuft, vilje, begjær)
+    \item kvinner og menn har begge fornuft
+    \item De beste reproduseres
+\end{enumerate}
+\end{subsectionbox}
+
+\begin{subsectionbox}[Oppsummering av states]
+I Platons idealstat skal alle gjøre det de er spesielt egent til. Kvinner har like mye fornuft som menn, derfor er de også egnet som ledere. De to øverste sjiktene, skal ikke ha familie og ikke vite hvem deres egne barn er. Bare de beste personene får reprodusere.
+\end{subsectionbox}
+
+\end{sectionbox}
+
+\end{document}

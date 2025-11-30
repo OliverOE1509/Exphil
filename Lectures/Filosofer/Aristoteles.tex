@@ -1,0 +1,121 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+\usepackage{multicol}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Kap. 17 - Den sosiale kontrakten - hvorfor trenger vi stat og myndighet?}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\begin{sectionbox}[Metafysikken]
+
+Aristoteles sine verk kan deles opp i 4 deler; metafysikk, epistemologi/erkjennelsesteori og praktisk filosofi. Aristoteles ville vite hvordan virkeligheten fungerer, en forutsetning for dette er hans metafysikk. Platons idelære er også en form for metafysikk, men Aristoteles var uenig og mente den burde være slik.
+
+
+\begin{subsectionbox}[Form og stoff]
+Aristoteles forståelse av ting er den samme som vi har. En stol er en ting, og en hest er en ting. Tingene kan ha egenskaper, som at stolen er slitt, eller hesten er stor.\\
+
+Siden Aristoteles vil forstå virkeligheten, er det lurt å finne ut hva virkeligheten består av, og den består av ting. Et bedre svar er å si at virkeligheten består av former og stoffer. Det er grunnleggende byggestrukturer som definerer det vi ser i virkeligheten. En hest har en form som en hest, men det er bedre å tenke på en form som \textit{funksjon}. Vi sier da at en hest er en hest om den har samme funksjon som en hest.
+\end{subsectionbox}
+
+
+\begin{subsectionbox}[De fire årsaker]
+
+Det er fire årsaker til at en kopp kan eksistere. Dette kan ytre generaliseres
+
+\begin{enumerate}
+    \item Hva er tingen laget av?
+    \item Hvordan er tingen formet?
+    \item Hva har laget tingen?
+    \item Hva er tingens formål?
+\end{enumerate}
+
+\end{subsectionbox}
+
+\end{sectionbox}
+
+
+\end{document}
