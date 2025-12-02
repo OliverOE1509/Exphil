@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[T1]{fontenc}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref} % legg dette i preamble
+\usepackage{amsthm}
+\newtheorem{definition}{Definisjon}
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+\newenvironment{oversettelse}{\begin{quote}\itshape\textbf{Oversettelse: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Eksamen høst 2024}
+
+\date{\today}
+
+\author{blank}
+\begin{document}
+\maketitle
+
+
+\section{Spørsmål 1}
+
+\subsection{a)}
+
+Gjør rede for resonnementet som leder til Menons paradoks i Platons dialog Menon.
+Hvordan svarer Sokrates på Menons paradoks?\\
+
+Menons paradoks går ut på at vi ikke kan oppnå kunnskap om noe, enn mindre vi vet hva det er vi vil oppnå kunnskap om. Hvis vi allerede har kunnskap om noe, så trenger vi ikke å finne det i utgangspuntket. Plato mener at vi erkjenner kunnskap gjennom formene. Altså at det er en ide om noe som vi vet varer evig. Sjelen er udødelig, og kan erkjenne disse formene. 
+
+Sokrates sitt svar er at kunnskapen allerede finnes latent i oss. Det er her ideene om former kommer inn. Vi kan se at en hest ligner på en hest, fordi den er en perfekt utgave av ideen om en hest. Hvis vi ser på skyer og ser at en sky ligner på en hest, så vet vi at det ikke er en hest, fordi skyen ikke er en perfekt utgave av en hest.
+
+
+\subsection{b)}
+Hva er hovedtrekkene i Platons «gjenerindringslære» slik den presenteres i dialogen
+Faidon? Hva sier denne læren om Platons syn på virkeligheten?\\
+
+Gjenerindringslæren forteller at likhet mellom former er ikke noe som finnes i verden. Vi kan se på to epler, men de vil fortsatt ikke ha samme atomer som bygger dem opp. Hvis de hadde det, hadde de vært på samme sted. Vi sier likevel at de er like fordi de etterligner en perfekt ide av et eple. Og vi gjenkjenner det med sjelen vår, som allerede hadde denne kunnskapen før vi ble født. Derfor er sjelen udødelig, fordi den besitter evig kunnskap
+
+
+Gjenerindringslæren forutsetter at Platon tror på en todelt verden. Den virkelige verden som er oppfattet av sansene våre, og en underliggende ideverden. Siden sansene er i stadig endring, så vil sanseverdenen være en mangelfull projeksjon fra ideverdenen.
+
+
+
+
+\section{Spørsmål 2}
+
+\subsection{a)}
+Hva er hovedtrekkene i Mills utilitarisme? I tekstutdraget (Utilitarisme, kapittel 15)
+diskuterer Mill flere innvendinger. Velg en av innvendingene og forklar hvordan Mill
+forsvarer sitt syn.\\
+
+Hovedtrekkene i Mills. utilitarisme. er at vi vil maksimere nytte,  eller utility på engelsk. Det forutsetter. at. all nytte. er homogent, man betrakter alle som er berørte. av handlingen, upartiske beslutninger, det vektlegger alle situasjonene. som er resultat og at det er et maksimeringsprinsipp. Alle beslutninger vi tar, burde være en funksjon av konsekvens sier Mills.  Dvs. at de negative konsekvensene av en handling er minst mulig. Han forutsetter at det også er kvalitative forskjeller mellom nytelser
+
+
+
+\end{document}

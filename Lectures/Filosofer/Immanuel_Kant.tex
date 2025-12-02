@@ -1,0 +1,285 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+\usepackage{multicol}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Immanuel Kant}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+
+\begin{sectionbox}[Kritikk av sunn fornuft]
+
+
+    Immanuel Kant ville bringe metafysikk til å bli vitenskapelig. Han mener noe kan kalles vitenskapelig om det tilfredsstiller visse prinsipp som er \textbf{\textit{syntetisk a priori}}. Descartes ville svare spørsmålet 
+    \begin{quote}
+        "Hva kan jeg vite?"
+    \end{quote}
+    Det ville også Kant, men han mener Descartes har feil.
+    
+\end{sectionbox}
+
+
+\begin{sectionbox}[Hvordan er syntetiske dommer a priori mulig?]
+
+det Kant ville vise i sin "kritikk av ren fornuft" er at syntetisk a priori kunnskap er mulig
+
+\begin{enumerate}
+    \item \textbf{\textit{a priori}} :
+    \item \textbf{\textit{a posteriori}}
+    \item \textbf{\textit{syntetisk}}
+    \item \textbf{\textit{analytisk}}
+\end{enumerate}
+
+Er \textit{svært} viktige termer å kunne
+
+\begin{subsectionbox}[a priori]
+Kunnskap er a priori om den er uavhengig av all observaterbar informasjon. Dvs. en ball kan ikke være helt rød og helt blå samtidig. Du kan vite hvilken farge ballen er, uten å kunne se ballen
+\end{subsectionbox}
+
+
+\begin{subsectionbox}[A posteriori]
+\begin{quote}
+    "Læreren har dårlig ånde" 
+\end{quote}
+er derimot et utsagn som krever observasjon for å vite 
+\end{subsectionbox}
+
+For å bestemme om kunnskap er \textbf{\textit{a priori}} eller \textbf{\textit{a posteriori}}, finn ut om du trenger observasjon for å finne kunnskap om det. Hvis du trenger observasjon, er det a posteriori, og motsatt annerledes\\
+
+Det neste begrepsparet er \textbf{\textit{syntetisk}} og \textbf{\textit{analytisk}} 
+
+
+\begin{subsectionbox}[Analytisk kunnskap]
+Dette er kunnskap som er \textit{smør på flesk kunnskap}. Dvs. at du ikke trenger noe mer innhold i en setning for å vite mer.\\
+
+For eksempel
+\begin{itemize}
+    \item "Ungkaren er ugift" - analytisk fordi det allerede ligger i "ungkar" at han er ugift
+    \item et kvadrat har fire kanter - analytisk fordi det allerede ligger i begrepet "kvadrat" at det har fire kanter
+    \item "Du får en gratis gave" - analytisk, fordi "gave" innebærer at det allerede er gratis
+\end{itemize}
+
+Det er dette vi mener med \textit{Smør på flesk kunnskap}. Det er unødvendig
+\end{subsectionbox}
+
+
+\begin{subsectionbox}[Syntetisk kunnskap]
+
+Det ligger mer informasjon i predikatoren enn i subjektet. 
+
+For eksempel
+\begin{quote}
+    "Statsministeren er kristen"
+\end{quote}
+Her er "Statsministeren" subjektet og "er kristen" er predikatoren. Dette er syntetisk kunnskap, fordi en statsminister er ikke automatisk kristen. Vi får mer informasjon enn bare at "han er statsminister".\\
+
+Et annet eksempel
+\begin{quote}
+    "Ungkaren er glad i blomster"
+\end{quote}
+Her er "ungkaren" subjektet og "glad i blomster" er predikatoren. En ungkar er ikke automatisk glad i blomster, derfor får vi mer informasjon om ungkaren, enn å bare si at "han er en ungkar"
+\end{subsectionbox}
+
+
+Det finnes altså da 4 typer kunnskap
+\begin{enumerate}
+    \item \textbf{\textit{Analytisk a priori}}
+    \item \textbf{\textit{Analytisk a posteriori}}
+    \item \textbf{\textit{Syntetisk a priori}}
+    \item \textbf{\textit{Syntetisk a posteriori}}
+\end{enumerate}
+
+Analytisk a posteriori finnes ikke. Kant synes at \textit{Syntetisk a priori}. Målet til Kant er å finne kunnskap som er syntetisk a priori fordi de er helt sikre, samtidig som de gir ny informasjon om verdenen
+\end{sectionbox}
+
+\begin{sectionbox}[Kritikk av tradisjonen]
+
+Descartes ville lage et sikkert grunnlag for filosofien, bygd opp av fornuft. Han ville for eksempel resonnere seg frem til at guds eksistens er rasjonelt. Kant er uenig med Kant her fordi Kant mener at all kunnskap om verdenen begynner med erfaring. Kants løsning er en kontroversiell teori om det vi kam ha syntetisk a priori kunnskap av. Det vi mennesker har erkjennelse av, er hvordan ting framtrer for oss, men ikke tingene i seg selv. Der metafysikken til Aristoteles går ut på å finne hvordan tingene er, går metafysikken til Kant ut på hvordan vi kan erkjenne at den er (og få viten om det). Der Aristoteles spør hvordan tingene er formet, spør Kant hvordan vi formerer tingene. Det Kant er på jakt etter med sine syntetiske a priori prinsipper, er betingelser på hvordan mennesker kan få viten om verden. Dette kaller Kant for \textbf{\textit{transcendentale betingelser}}.\\
+
+
+Et eksempel på syntetisk a priori kunnskap, er om det blir ringt til politiet om et ran. Da vet politiet med sikkerhet at det \textit{skjedde}, det skjedde på et \textit{tidspunkt} og at det hadde en \textit{årsak}. Kan hende innringeren ikke vet noen av disse, men at det finnes et svar til alle tre spørsmål, er sikkert. Med andre ord, er både sted, tid og årsak syntetisk a priori kunnskap. Alt dette kaller Kant for \textbf{\textit{transcendentale forutsetninger}} for vår erkjennelse.\\
+
+
+Det viktigste for oss er å erkjenne at Kant har lagt til grunne hvordan mennesker erkjenner virkeligheten, ikke hvordan den henger sammen, uavhengig av oss.
+
+\end{sectionbox}
+
+
+\begin{sectionbox}[Sentrale begreper]
+\begin{enumerate}
+    \item A priori
+    \item A posteriori
+    \item Analytisk
+    \item Syntetisk
+    \item Syntetisk a priori
+    \item Framtredelser
+    \item Rom
+    \item Tid
+    \item Årsak
+    \item Transcendentale betingelser
+\end{enumerate}
+
+Kant vil i sin erkjennelsesteori gjøre metafysikken til en vitenskap. Han mener han kan gjøre dette ved å vise at de syntetiske dommer a priori er mulig. Disse er forutsetninger for all menneskelig erkjennelsan finner bl.a. følgende tre syntetiske a priori former; tid, sted, årsak. Alt som skjer, må skje et sted, på en tid, og må ha en årsak. 
+\end{sectionbox}
+
+
+\begin{sectionbox}[Grunnlegging av moralens metafysikk]
+
+Kant skiller i sin etikk mellom moralske og legale handlinger, dvs. handlinger som er motivert ut fra plikt, og de som er annerleder motivert, men som likevel er tillatt. Det vi er forpliktet av, er det kategoriske imperativ, som formuleres på to måter: Du skal kunne ville at handlingsregelen din blir en allmenn lov. Bruk aldri andre kun som middel, men også formål i seg selv.
+
+\begin{subsectionbox}[Hva er moralsk riktig?]
+
+De handlinger som er motivert ut ifra god vilje, er moralske. Dette kalles for \textbf{\textit{autonomi}}. Dette er sterkt koblet til \textit{Selvbestemmelse}, fordi autonomi betyr at vi er frie og kan ta egne beslutninger. Hvis det ikke var mulig å være autonome, kan vi ikke være moralske. \\
+
+\textbf{\textit{Legale}} handlinger er handlinger som er motivert av plikt, og \textbf{\textit{Moralske}} handlinger er motivert av moral.\\
+
+Hvis en filantrop hjelper en mann ut av sympati, så er ikke det en moralsk handling, fordi den er motivert av sympati. Sympati kan forsvinne.
+\end{subsectionbox}
+
+\begin{subsectionbox}[Kategirske imperativ]
+
+\textbf{\textit{Kategoriske imperativ}} er kategorisk fordi den gjelder uavhengig av person, og den er imperativ fordi den gjelder \textit{alle må følge den}. Dette er moralens metafysiske fundament. Kategoriske imperativ er syntetisk a priori, i likhet med sted, tid og årsak. \\
+
+\begin{quote}
+    For eksempel: Hvis jeg trenger desperat penger, kan jeg ikke da låne penger av en rik venn for å ikke betale han tilbake? Nei, fordi din \textit{handlingsregel} er ikke allmen lov. Altså, hvis det var allmenn lov at penger som er lånt, ikke blir betalt tilbake, så vil jeg ikke låne ut penger. Dette gagner ingen. \textbf{\textit{KARDEMOMMELOVEN: IKKE GJØR MOT ANDRE, DU IKKE VIL SKAL GJØRE MOT DEG}}
+\end{quote}
+
+En annen formulering av det kategoriske imperativ, er at \textit{"Du skal ikke behandle andre som et middel, men du skal behandle de som et formål"}. Du skal altså aldri bruke andre mennesker som et middel.\\
+
+Kant sitt syn på selvmord er at det er umoralsk, fordi alle mennesker har en plikt å beholde og sørge for livet sitt. Derfor roser Kant en person som vil ta selvmord, men ikke gjør det som en moralsk person.
+
+\end{subsectionbox}
+
+\begin{subsectionbox}[Sentrale begreper]
+\begin{enumerate}
+    \item Moralsk handling
+    \item Legal handling
+    \item Det kategoriske imperative
+    \item Handlingsregel
+    \item Universalitetsformuleringen
+    \item Humanitetsformuleringen
+\end{enumerate}
+\end{subsectionbox}
+
+\end{sectionbox}
+
+
+\begin{sectionbox}[Moralens metafysikk]
+Det strider mot menneskets plikt overfor seg selv å lyve. Det er derfor alltid galt å lyve. Når det gjelder forpliktelser overfor dyr, mener Kant at de ikke har rettigheter all den tid de heller ikke kan pålegges plikter. Man skal likevel ikke være grusom mot dyr, fordi en slik grusomhet gjør moralen vanskeligere.
+
+\begin{subsectionbox}[Sentrale begrep]
+\begin{enumerate}
+    \item Humanitetsformuleringen
+    \item Plikten overfor mennesker
+    \item Hensyn overfor dyr
+\end{enumerate}
+\end{subsectionbox}
+
+\end{sectionbox}
+
+\begin{sectionbox}[Kvinners to roller]
+\begin{enumerate}
+    \item Å reprodusere
+    \item Å holde menn sivile
+\end{enumerate}
+
+Å reprodusere er naturlig. Å holde menn sivile vil si at kvinner har en mer rolig natur, og at menn blir mer sivile av å ha en kvinne de må være med. Denne rolige naturen, er gunstig for menneskets utvikling og opprettholdelse
+
+\begin{subsectionbox}[Sentrale begreper]
+\begin{enumerate}
+    \item Kvinners to funksjoner (reprodusere, sivilisere menn)
+    \item Fornuft som forutsetning for moralitet
+\end{enumerate}
+\end{subsectionbox}
+
+Kant hevder at det fra naturens side finnes en forskjell mellom kvinner og menn. Menn er karakterisert ved at de er aktive og fornuftige, kvinner ved at de er passive og følsomme. Kvinner har likevel et viktig formål i naturen: De skal bringe arten videre, få barn. og bidra til å sivilisere mannen ved sin milde natur. Men det at mange kvinner mangler fornuft, bidrar til at de ikke kan være moralske eller politiske medborgere på samme måte som menn kan det.
+\end{sectionbox}
+
+
+
+
+\end{document}

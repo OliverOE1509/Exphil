@@ -1,0 +1,155 @@
+
+\documentclass[11pt, a4paper]{article}
+
+% ===== ESSENTIAL PACKAGES =====
+\usepackage{geometry}
+\geometry{a4paper, margin=1.2in}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{xcolor}
+\onehalfspacing
+\setlength{\parskip}{1em}
+\usepackage{multicol}
+
+\usepackage{catchfile}
+
+% ===== WORD COUNT COMMAND =====
+\newcommand{\wordcount}{%
+    \ifnum\pdf@shellescape=1%
+        \immediate\write18{texcount -1 -sum Oblig1.tex > wordcount.txt}%
+        \CatchFileDef{\words}{wordcount.txt}{}%
+        \words%
+    \else%
+        [Enable -shell-escape]%
+    \fi%
+}
+\usepackage{mdframed}
+
+\newmdenv[
+    leftmargin=-50pt,
+    rightmargin=0pt,
+    innerleftmargin=3pt,
+    innerrightmargin=0pt,
+    innertopmargin=5pt,
+    innerbottommargin=5pt,
+    skipabove=5pt,
+    skipbelow=5pt,
+    linewidth=1pt,
+    linecolor=black,
+    topline=true,
+    rightline=false,
+    bottomline=false
+]{sectionboxinner}
+
+\newenvironment{sectionbox}[1][]{%
+    \begin{sectionboxinner}
+    \textbf{\large #1}
+    \vspace{1pt}
+    \newline
+}{%
+    \end{sectionboxinner}
+}
+
+\newmdenv[
+    leftmargin=0pt,
+    rightmargin=0pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=3pt,
+    innerbottommargin=3pt,
+    skipabove=8pt,
+    skipbelow=8pt,
+    linewidth=1.2pt,
+    linecolor=gray!60,  % Lighter gray color
+    topline=false,
+    rightline=false,
+    bottomline=false
+]{subsectionboxinner}
+
+\newenvironment{subsectionbox}[1][]{%
+    \begin{subsectionboxinner}
+    \textbf{#1}
+    \vspace{3pt}
+    \newline
+}{%
+    \end{subsectionboxinner}
+}
+
+% ===== CUSTOM ENVIRONMENTS FOR PHILOSOPHICAL ARGUMENTS =====
+\newenvironment{argument}{\begin{quote}\itshape\textbf{Argument: }}{\end{quote}}
+\newenvironment{objection}{\begin{quote}\itshape\textbf{Innvending: }}{\end{quote}}
+\newenvironment{reply}{\begin{quote}\itshape\textbf{Reply: }}{\end{quote}}
+
+% ===== DOCUMENT BEGIN =====
+\title{Descartes}
+\author{Oliver Ekeberg}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+Descartes er en filosof som har grunnlagt moderne epistemologi. Det. filosofiske spørsmålet, hvordan kan vi vite? Descartes ville finne en felles vei for hvordan man oppnår kunnskap. Han gjør dette ved å tvile på alt sansene presenterer for han. Fordi han vet at sansene forfører han. Når han tviler på alt vil han finne et sikkert fundament hvor han kan ha sikker viten. Dette. kaller han for \textbf{\textit{metodisk tvil}}
+
+\begin{sectionbox}[Metodisk tvil]
+\textbf{\textit{Drømmeargumentet}}: Det er ikke sikkert å skille mellom om vi drømmer eller er våkne. \\
+
+\textbf{\textit{Demonargumentet}}: Descartes går ut ifra at gud. er ikke bare. all sannhets kilde, men at det finnes en ond demon som har til hensikt å forføre sansene og sinnet, slik at $ 2+3\neq 5  $ for eksempel. Et motargument til dette er om det finnes noen tilfeller, hvor matematikken ikke er en basis hvor man kan utlede all logikk ut fra.\\
+
+Alt dette får han til å komme frem til at hvis han tviler, så vet han at han er. "Cogito ergo sum"
+
+\end{sectionbox}
+
+
+\begin{sectionbox}[Gudsbeviset]
+Gudsbeviset går ut på Descartes kan se for seg et fullkomment vesen i seg, som er høyere enn han selv. Dette ser Descartes på som ekvivalens mellom årsak og virkning. Det er klart at han slutter at dette fullkomne vesenet er gud. Siden gud er god,  vil ikke gud. forplante eller forføre sansene til Descartes. Den onde. demonen er grunnen til at Descartes ikke kunne feste lit til matematikken. Når han har ryddet demonen av veien, konkluderer han med at matematikken er fundamentet for all vitenskap, og matematikken kan benyttes som et utgangspunkt for all moderne vitenskap
+\end{sectionbox}
+
+
+\begin{sectionbox}[Sjel og legeme]
+Descartes hadde stor tro på den mekanistiske verdenen, altså at hele verden er en maskin som kan reduseres til tall kanskje? Han hadde også tro på at det finnes to substanser, det tenkende og det utstrakte. Descartes mener selv at det tenkende substanset kan påvirke det utstrakte. Descartes sliter med å vise dette ved å si at tanker er kausalt for bevegelse av kroppen. Uten å forstå det selv, konkluderer han at det finnes en pinealkjertel i hjernen som er singulariteten mellom sjel og legeme
+
+\end{sectionbox}
+
+
+\begin{sectionbox}[Sentrale begreper]
+\begin{enumerate}
+    \item Erkjennelsesteori
+    \item Metodisk tvil
+    \item Drømmeargumentet
+    \item Demonargumentet
+    \item cogito ergo sum
+    \item Gudsbeviset
+    \item Sjel og legeme
+\end{enumerate}
+
+\end{sectionbox}
+
+
+\begin{sectionbox}[Mekanistiske verdenssyn]
+I ganske stor likhet med Galileo og Newton, som mener at verden består av partikler og atomer som følger naturlover. En naturlov er et matematisk teorem som ikke er beviselig, det bare er sånn. Det som er felles for alt som følger naturlovene, er at det er utstrakt. Descartes mente at alt som ikke har en kraft virkende på seg, beveger seg i konstant fart og i en rett linj.\\
+
+Er dyr maskiner? Dyr kan ikke snakke som selv det mest inkompetente mennesket kan. Videre så er dyr eksepsjonelt gode på å utføre spesielle oppgaver, trekkfugler er utmerket på å kalkulere tid. Ugler er utmerket på å se i mørket. Akkurat på samme måte som at en maskin er utmerket på spesielle oppgaver.\\
+
+
+Å sammenligne mennesker med dyr er moralsk ødeleggende. Sjel og legeme er to forskjellige ting. Når kroppen dør, fortsetter sjelen å leve, fordi sjelen er udødelig, i likhet med Platon. 
+
+
+
+\end{sectionbox}
+\begin{sectionbox}[Sentrale begreper']
+\begin{enumerate}
+    \item Mekanistisk verdenssyn
+    \item Utstrakte ting (legeme)
+    \item Tenkende ting (sjel)
+    \item Dyrs mangel på sjel
+\end{enumerate}
+\end{sectionbox}
+
+\begin{sectionbox}[oppsummert]
+Descartes mener at naturen, inkludert dyr fungerer som en sjelløs mekanisme. Sjel for Descartes er uløselig knyttet til tenkeevnen, og dyrene mangler denne tankeevnen. Derfor er tanker knyttet til sjel og utstrekning er knyttet til legeme
+
+\end{sectionbox}
+
+\end{document}
